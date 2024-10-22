@@ -28,9 +28,9 @@ Os tipos oferecem validação de campos e tipos.
 Exemplo para listar departamentos.
 
 ```python
-departamento_listar_request = client.get_type('departamento_listar_request')
+DepartamentoListarRequest = client.get_type('departamento_listar_request')
 
-response_pages = client.execute_call("ListarDepartamentos", departamento_listar_request(**{
+response_pages = client.execute_call("ListarDepartamentos", DepartamentoListarRequest(**{
   "pagina": 1,
   "registros_por_pagina": 20,
 }), True)
